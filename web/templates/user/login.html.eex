@@ -1,6 +1,6 @@
-<h2>New user</h2>
+<h2>Login</h2>
 
 <%= render "login_form.html", login_set: @login_set,
-                        action: user_path(@conn, :create) %>
+                        action: session_path(@conn, :create) %>
 
-<%= link "Back", to: user_path(@conn, :index) %>
+<%= link "Back", to: card_path(@conn, :index) %>

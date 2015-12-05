@@ -13,6 +13,9 @@ defmodule Cards.Router do
     plug :accepts, ["json"]
   end
 
+  # pipeline :layout do
+  #   plug :layout, {Cards.LayoutView, :}
+
   scope "/", Cards do
     pipe_through :browser # Use the default browser stack
 
@@ -20,6 +23,7 @@ defmodule Cards.Router do
     resources "/cards", CardController
     resources "/users", UserController
     get "/login", UserController, :login
+    post "/login", SessionController, :create
   end
 
   # Other scopes may use custom stacks.

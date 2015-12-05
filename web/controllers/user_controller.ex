@@ -11,7 +11,7 @@ defmodule Cards.UserController do
   end
 
   def login(conn, _params) do
-    login_set = User.logn_set(%User{})
+    login_set = User.login_set(%User{})
     render(conn, "login.html", login_set: login_set)
   end
 
