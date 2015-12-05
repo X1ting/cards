@@ -1,5 +1,5 @@
 <h2>Listing cards</h2>
-<%= link "Login", to: session_path(@conn, :create) %>
+<%= link "Login", to: user_path(@conn, :login) %>
 <table class="table">
   <thead>
     <tr>

@@ -1,4 +1,5 @@
 defmodule Cards.Router do
+  use Addict.RoutesHelper
   use Cards.Web, :router
 
   pipeline :browser do
@@ -17,13 +18,12 @@ defmodule Cards.Router do
   #   plug :layout, {Cards.LayoutView, :}
 
   scope "/", Cards do
+    addict :routes
     pipe_through :browser # Use the default browser stack
 
     get "/", CardController, :index
     resources "/cards", CardController
     resources "/users", UserController
-    get "/login", UserController, :login
-    post "/login", SessionController, :create
   end
 
   # Other scopes may use custom stacks.

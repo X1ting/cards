@@ -30,3 +30,7 @@ config :phoenix, :generators,
 config :phoenix, :template_engines,
     slim: PhoenixSlim.Engine
 
+config :addict, not_logged_in_url: "/error",  # the URL where users will be redirected to
+                db: Cards.Repo,
+                user: Cards.User
+

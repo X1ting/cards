@@ -31,6 +31,7 @@ defmodule Cards.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [{:phoenix, "~> 1.0.4"},
+     {:addict, git: 'git@github.com:phongmh307/addict.git'},
      {:phoenix_slim, "~> 0.4.1"},
      {:phoenix_ecto, "~> 1.1"},
      {:postgrex, ">= 0.0.0"},
