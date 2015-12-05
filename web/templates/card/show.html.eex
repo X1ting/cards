@@ -1,0 +1,38 @@
+<h2>Show card</h2>
+
+<ul>
+
+  <li>
+    <strong>Body:</strong>
+    <%= @card.body %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @card.title %>
+  </li>
+
+  <li>
+    <strong>Visibility:</strong>
+    <%= @card.visibility %>
+  </li>
+
+  <li>
+    <strong>Views:</strong>
+    <%= @card.views %>
+  </li>
+
+  <li>
+    <strong>Author:</strong>
+    <%= @card.author_id %>
+  </li>
+
+  <li>
+    <strong>Heap:</strong>
+    <%= @card.heap_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: card_path(@conn, :edit, @card) %>
+<%= link "Back", to: card_path(@conn, :index) %>
